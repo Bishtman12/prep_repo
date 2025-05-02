@@ -1,0 +1,172 @@
+1. What is Node.js?
+   Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side execution of JavaScript.
+
+2. What are the key features of Node.js?
+   Key features include non-blocking I/O, event-driven architecture, single-threaded model, and a rich ecosystem of libraries.
+
+3. How does Node.js handle asynchronous operations?
+   Node.js uses an event-driven, non-blocking I/O model, allowing it to handle multiple operations concurrently without waiting for each to complete.
+
+4. What is the difference between `require` and `import`?
+   `require` is used in CommonJS modules and is synchronous, while `import` is used in ES6 modules and can be asynchronous.
+
+5. What is the purpose of the `package.json` file?
+   The `package.json` file manages project dependencies, scripts, and metadata for Node.js applications.
+
+6. What is middleware in Express?
+   Middleware is a function that processes requests and responses in the Express application, allowing for additional functionality like logging, authentication, etc.
+
+7. How do you handle errors in Node.js?
+   Errors can be handled using try-catch blocks for synchronous code and the error-first callback pattern or Promises for asynchronous code.
+
+8. What is the event loop in Node.js?
+   The event loop is a mechanism that allows Node.js to perform non-blocking I/O operations by offloading tasks to the system kernel.
+
+9. What are streams in Node.js?
+   Streams are objects that allow reading data from a source or writing data to a destination in a continuous manner, categorized as readable, writable, or duplex.
+
+10. What is the purpose of the `process` object?
+    The `process` object provides information about the current Node.js process and allows interaction with the operating system.
+
+11. How can you create a simple HTTP server in Node.js?
+    You can create a simple HTTP server using the `http` module like this:
+    ```javascript
+    const http = require('http');
+    http.createServer((req, res) => {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('Hello World!');
+    }).listen(3000);
+    ```
+
+12. What is the difference between `setTimeout` and `setInterval`?
+    `setTimeout` executes a function once after a specified delay, while `setInterval` repeatedly executes a function at specified intervals.
+
+13. What is a callback function?
+    A callback function is a function passed into another function as an argument, which is then invoked inside that function.
+
+14. What are Promises in Node.js?
+    Promises are objects that represent the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+15. What is the purpose of the `async` and `await` keywords?
+    `async` makes a function return a Promise, and `await` pauses the execution until the Promise is resolved, allowing for cleaner asynchronous code.
+
+16. How do you read a file in Node.js?
+    You can read a file using the `fs` module:
+    ```javascript
+    const fs = require('fs');
+    fs.readFile('file.txt', 'utf8', (err, data) => {
+        if (err) throw err;
+        console.log(data);
+    });
+    ```
+
+17. What is the use of the `Buffer` class in Node.js?
+    The `Buffer` class is used to handle binary data in Node.js, allowing for manipulation of raw binary data.
+
+18. How do you create a RESTful API in Node.js?
+    You can create a RESTful API using Express by defining routes that correspond to HTTP methods (GET, POST, PUT, DELETE) and handling requests accordingly.
+
+19. What is CORS and how do you enable it in Node.js?
+    CORS (Cross-Origin Resource Sharing) is a security feature that restricts web pages from making requests to a different domain. You can enable it using the `cors` middleware in Express.
+
+20. What is the purpose of the `npm` command?
+    `npm` (Node Package Manager) is used to install, manage, and share packages in Node.js applications.
+
+21. How do you handle environment variables in Node.js?
+    You can handle environment variables using the `process.env` object or by using packages like `dotenv` to load variables from a `.env` file.
+
+22. What is the difference between `process.nextTick()` and `setImmediate()`?
+    `process.nextTick()` schedules a callback to be invoked in the same phase of the event loop, while `setImmediate()` schedules a callback to be invoked in the next iteration of the event loop.
+
+23. How do you implement authentication in a Node.js application?
+    Authentication can be implemented using libraries like `passport` or `jsonwebtoken` for token-based authentication.
+
+24. What is the purpose of the `cluster` module in Node.js?
+    The `cluster` module allows you to create child processes that share the same server port, enabling load balancing across multiple CPU cores.
+
+25. How do you connect to a MongoDB database in Node.js?
+    You can connect to MongoDB using the `mongoose` library:
+    ```javascript
+    const mongoose = require('mongoose');
+    mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true, useUnifiedTopology: true });
+    ```
+
+26. What is the purpose of the `http` module in Node.js?
+    The `http` module allows you to create HTTP servers and clients, enabling communication over the web.
+
+27. How do you serve static files in Express?
+    You can serve static files using the `express.static` middleware:
+    ```javascript
+    app.use(express.static('public'));
+    ```
+
+28. What is the difference between `==` and `===` in JavaScript?
+    `==` checks for equality with type coercion, while `===` checks for strict equality without type coercion.
+
+29. How do you implement logging in a Node.js application?
+    You can implement logging using libraries like `winston` or `morgan` to log requests and application events.
+
+30. What is the purpose of the `dotenv` package?
+    The `dotenv` package is used to load environment variables from a `.env` file into `process.env`.
+
+31. How do you handle file uploads in Node.js?
+    You can handle file uploads using middleware like `multer` to process `multipart/form-data`.
+
+32. What is the purpose of the `body-parser` middleware?
+    The `body-parser` middleware is used to parse incoming request bodies in a middleware before your handlers, available under the `req.body` property.
+
+33. How do you implement pagination in a Node.js application?
+    Pagination can be implemented by using query parameters to limit the number of results returned from a database query.
+
+34. What is the purpose of the `jsonwebtoken` package?
+    The `jsonwebtoken` package is used to create and verify JSON Web Tokens (JWT) for secure authentication.
+
+35. How do you handle rate limiting in a Node.js application?
+    Rate limiting can be implemented using middleware like `express-rate-limit` to limit the number of requests from a client.
+
+36. What is the purpose of the `cors` package?
+    The `cors` package is used to enable Cross-Origin Resource Sharing in Express applications.
+
+37. How do you implement sessions in a Node.js application?
+    Sessions can be implemented using the `express-session` middleware to store session data on the server.
+
+38. What is the purpose of the `mongoose` library?
+    The `mongoose` library is an ODM (Object Data Modeling) library for MongoDB and Node.js, providing a schema-based solution to model application data.
+
+39. How do you perform input validation in a Node.js application?
+    Input validation can be performed using libraries like `express-validator` to validate and sanitize user input.
+
+40. What is the purpose of the `nodemon` package?
+    The `nodemon` package is a utility that automatically restarts the Node.js application when file changes are detected.
+
+41. How do you implement WebSockets in a Node.js application?
+    WebSockets can be implemented using the `ws` library to enable real-time communication between the server and clients.
+
+42. What is the purpose of the `pm2` process manager?
+    `pm2` is a process manager for Node.js applications that allows you to keep applications alive forever and manage application clustering.
+
+43. How do you handle database migrations in a Node.js application?
+    Database migrations can be handled using libraries like `knex` or `sequelize` to manage schema changes.
+
+44. What is the purpose of the `express` framework?
+    The `express` framework is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+45. How do you implement file compression in a Node.js application?
+    File compression can be implemented using the `compression` middleware to gzip responses.
+
+46. What is the purpose of the `helmet` middleware?
+    The `helmet` middleware is used to secure Express applications by setting various HTTP headers.
+
+47. How do you implement OAuth in a Node.js application?
+    OAuth can be implemented using libraries like `passport` with strategies for different providers (e.g., Google, Facebook).
+
+48. What is the purpose of the `multer` middleware?
+    The `multer` middleware is used for handling `multipart/form-data`, which is primarily used for uploading files.
+
+49. How do you implement a cron job in a Node.js application?
+    Cron jobs can be implemented using the `node-cron` library to schedule tasks at specific intervals.
+
+50. What is the purpose of the `express-validator` library?
+    The `express-validator` library is used to validate and sanitize user input in Express applications.
+
+
